@@ -1,0 +1,68 @@
+# ---- input/data, &PARM05 ----
+ hydrogThetaFile = 'T_ic.bin',
+ hydrogSaltFile  = 'S_ic.bin',
+ uVelInitFile    = 'U_ic.bin',
+ vVelInitFile    = 'V_ic.bin',
+ pSurfInitFile   = 'Eta_ic.bin',
+
+# ---- input/data.obcs ----
+ &OBCS_PARM01
+ OB_Jnorth = 250*-1,
+ OB_Jsouth = 250*1,
+ OB_Ieast = 250*-1,
+ OB_Iwest = 250*1,
+ useOBCSprescribe = .TRUE.,
+ OBNtFile = 'OBN_T.bin',
+ OBNsFile = 'OBN_S.bin',
+ OBNuFile = 'OBN_U.bin',
+ OBNvFile = 'OBN_V.bin',
+# OBNetaFile = 'OBN_Eta.bin',   (only with NONLIN_FRSURF)
+ OBStFile = 'OBS_T.bin',
+ OBSsFile = 'OBS_S.bin',
+ OBSuFile = 'OBS_U.bin',
+ OBSvFile = 'OBS_V.bin',
+# OBSetaFile = 'OBS_Eta.bin',   (only with NONLIN_FRSURF)
+ OBEtFile = 'OBE_T.bin',
+ OBEsFile = 'OBE_S.bin',
+ OBEuFile = 'OBE_U.bin',
+ OBEvFile = 'OBE_V.bin',
+# OBEetaFile = 'OBE_Eta.bin',   (only with NONLIN_FRSURF)
+ OBWtFile = 'OBW_T.bin',
+ OBWsFile = 'OBW_S.bin',
+ OBWuFile = 'OBW_U.bin',
+ OBWvFile = 'OBW_V.bin',
+# OBWetaFile = 'OBW_Eta.bin',   (only with NONLIN_FRSURF)
+ &
+
+# ---- input/data.cal ----
+ &CAL_NML
+ TheCalendar = 'gregorian',
+ startDate_1 = 20160101,
+ startDate_2 = 000000,
+ &
+
+# ---- input/data.exf ----
+ &EXF_NML_01
+ &
+ &EXF_NML_02
+ &
+ &EXF_NML_03
+ &
+ &EXF_NML_04
+ &
+ &EXF_NML_OBCS
+ obcsNstartdate1 = 20160101,
+ obcsNstartdate2 = 000000,
+ obcsNperiod     = 864000.0,
+ obcsSstartdate1 = 20160101,
+ obcsSstartdate2 = 000000,
+ obcsSperiod     = 864000.0,
+ obcsEstartdate1 = 20160101,
+ obcsEstartdate2 = 000000,
+ obcsEperiod     = 864000.0,
+ obcsWstartdate1 = 20160101,
+ obcsWstartdate2 = 000000,
+ obcsWperiod     = 864000.0,
+ &
+
+# records: 4, 2016-01-01 00:00 .. 2016-01-31 00:00  -> max run length 2592000 s
